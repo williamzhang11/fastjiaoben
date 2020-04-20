@@ -12,7 +12,7 @@ if [ "$command" == 'install' ];then
     wget -O chaosblade-0.5.0-linux-amd64.tar.gz https://chaosblade.oss-cn-hangzhou.aliyuncs.com/agent/github/0.5.0/chaosblade-0.5.0-linux-amd64.tar.gz
     tar -zxvf chaosblade-0.5.0-linux-amd64.tar.gz
     cd ${chaosRootBin}
-    ./blade prepare jvm --process $1
+    ./blade prepare jvm --process ${javaProcess}
     ./blade server start --port 22222
 
 elif [ "$command" == 'uninstall' ];then
